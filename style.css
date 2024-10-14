@@ -290,15 +290,24 @@ body {
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
+/* General styles */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif; /* Set a default font */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    height: 100vh; /* Set body height to full viewport */
+}
+
 /* Background image styling */
 .background-image {
     background-image: url('background.jpg'); /* Your background image */
-    background-size: cover; /* Ensure the image covers the entire div */
+    background-size: cover; /* Ensure the image covers the entire area */
     background-repeat: no-repeat; /* Prevent repeating */
     background-position: center; /* Keep it centered */
-    height: calc(100vh - 150px); /* Adjust for the header height */
-    width: 100%;
-    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    position: relative; /* Positioned relative for content overlay */
     padding: 20px; /* Optional: Add padding for better spacing */
     box-sizing: border-box; /* Include padding in height/width calculations */
     color: white; /* Change text color for visibility */

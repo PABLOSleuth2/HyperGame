@@ -281,13 +281,49 @@ nav a:hover {
     background-color: rgba(255, 0, 0, 0.6); /* Red transparent on hover */
 }
 
+/* Background image styling */
+/* General styles */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif; /* Set a default font */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Background image styling */
 .background-image {
-    background-image: url('background.jpg'); /* Add your background image */
-    background-size: 115%; /* Adjust size */
+    background-image: url('background.jpg'); /* Your background image */
+    background-size: cover; /* Ensure the image covers the entire div */
     background-repeat: no-repeat; /* Prevent repeating */
     background-position: center; /* Keep it centered */
-    height: calc(100vh - 150px); /* Adjusts for the header */
+    height: calc(100vh - 150px); /* Adjust for the header height */
     width: 100%;
     position: relative;
-    z-index: -1; /* Ensure it appears behind other content */
+    padding: 20px; /* Optional: Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in height/width calculations */
+    color: white; /* Change text color for visibility */
+    z-index: 1; /* Ensure this layer is above the background */
+}
+
+/* Section styles */
+.about-section, .product-section {
+    position: relative; /* Allow layering of elements within */
+    z-index: 2; /* Ensure content is above the background */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .background-image {
+        height: 100vh; /* Use full viewport height on mobile */
+    }
+
+    /* Additional mobile styles */
+    .about-section, .product-section {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    /* Ensure text is more readable on smaller screens */
+    h2, h3, p {
+        font-size: 16px; /* Adjust font sizes for readability */
+    }
 }
